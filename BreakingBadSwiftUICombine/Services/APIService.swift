@@ -45,16 +45,7 @@ struct APIService {
     private let decoder = JSONDecoder()
     private let queue = DispatchQueue(label: "BreakingBadAPIService", qos: .default, attributes: .concurrent)
     
-    mutating func getCharacters(completion: @escaping ([Character]) -> ()) {
-        let publisher = getCharacters()
-            .sink(receiveCompletion: { print($0) }, receiveValue: { print($0) })
-            .store(in: &self.subscriptions)
-
-
-        
-    }
-    
-    private func getCharacters() -> AnyPublisher<[Character], Error> {
+    func getCharacters() -> AnyPublisher<[Character], Error> {
     
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         

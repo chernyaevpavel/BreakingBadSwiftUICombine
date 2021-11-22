@@ -6,24 +6,21 @@
 //
 
 import SwiftUI
-
+import Combine
 
 struct CharctersListView: View {
+
     @ObservedObject var viewModel: CharacterViewModel
     
+    
     var body: some View {
-        List {
-            
-        }.onAppear {
+        
+        List(self.viewModel.characters) { character in
+            Text(character.name)
+        }.onAppear(perform: {
             self.viewModel.getCharacters()
-        }
-    }
-}
+        })
+        .navigationTitle("character")
 
-struct CharctersList_Previews: PreviewProvider {
-    static var previews: some View {
-        let apiService = APIService()
-        let viewModel = CharacterViewModel(apiService: apiService)
-        CharctersListView(viewModel: viewModel)
     }
 }

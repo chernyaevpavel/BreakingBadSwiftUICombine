@@ -15,12 +15,16 @@ enum Tabs: String {
 
 struct MainTab: View {
     let characterViewModel = CharacterViewModel(apiService: APIService())
+    let episodeViewModel = EpisodesViewModel(apiService: APIService())
     
     var body: some View {
         TabView {
             CharctersListView(viewModel: characterViewModel)
                 .tabItem { Label("Герои", systemImage: "person.3.fill") }
                 .tag(Tabs.characters)
+            EpisodesListView(viewModel: episodeViewModel)
+                .tabItem { Label("Эпизоды", systemImage: "person.3.fill") }
+                .tag(Tabs.episodes)
         }
     }
 }

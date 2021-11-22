@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import Combine
 
 class CharacterViewModel: ObservableObject {
     
-    var  apiService: APIService
+    private var cancellable = Set<AnyCancellable>()
+    private var  apiService: APIService
     @Published var characters: [Character] = []
     
     init(apiService: APIService) {
@@ -17,8 +19,15 @@ class CharacterViewModel: ObservableObject {
     }
     
     func getCharacters() {
-        apiService.getCharacters { characters in
-            self.characters = characters
-        }
+        apiService.getCharacters()
+            .receive(on: RunLoop.main)
+            .sink { completion in
+                print(completion)
+            } receiveValue: { [weak self] characters in
+                guard let self = self else { return }
+                self.characters = characters
+                print(characters)
+            }
+            .store(in: &cancellable)
     }
 }

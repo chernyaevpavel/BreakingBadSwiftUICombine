@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Character: Codable {
+struct Character: Codable, Identifiable {
+    
+    let id: UUID = UUID()
     let charId: Int
     let name: String
     let birthday: String
@@ -18,4 +20,5 @@ struct Character: Codable {
     let appearance: [Int]
     let portrayed: String
     let category: String
+    
 }
