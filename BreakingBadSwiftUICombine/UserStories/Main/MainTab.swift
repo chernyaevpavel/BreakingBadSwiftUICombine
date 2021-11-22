@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainTab.swift
 //  BreakingBadSwiftUICombine
 //
 //  Created by Павел Черняев on 20.11.2021.
@@ -7,15 +7,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainTab: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        TabView {
+            <#code#>
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainTab_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainTab()
     }
 }
