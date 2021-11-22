@@ -10,6 +10,8 @@ import Combine
 
 struct APIService {
     
+    private var subscriptions: Set<AnyCancellable> = []
+    
     enum Method {
         
         private static let baseURL = URL(string: "https://www.breakingbadapi.com/api/")!
@@ -43,19 +45,17 @@ struct APIService {
     private let decoder = JSONDecoder()
     private let queue = DispatchQueue(label: "BreakingBadAPIService", qos: .default, attributes: .concurrent)
     
-    func getCharacters(completion: @escaping ([Character]) -> ()) {
+    mutating func getCharacters(completion: @escaping ([Character]) -> ()) {
         let publisher = getCharacters()
-        publisher.sink { compl in
-            print(compl)
-        } receiveValue: { charcters in
-            completion(charcters)
-        }
+            .sink(receiveCompletion: { print($0) }, receiveValue: { print($0) })
+            .store(in: &self.subscriptions)
+
 
         
     }
     
     private func getCharacters() -> AnyPublisher<[Character], Error> {
-        
+    
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         let url = Method.characters.url

@@ -15,7 +15,7 @@
 		B6C96A102749785900FEE5E9 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C96A0F2749785900FEE5E9 /* Episode.swift */; };
 		B6C96A182749793B00FEE5E9 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C96A172749793B00FEE5E9 /* MainTab.swift */; };
 		B6C96A1A27497A0000FEE5E9 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C96A1927497A0000FEE5E9 /* CharacterViewModel.swift */; };
-		B6C96A1C27497BE000FEE5E9 /* CharctersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C96A1B27497BE000FEE5E9 /* CharctersList.swift */; };
+		B6C96A1C27497BE000FEE5E9 /* CharctersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C96A1B27497BE000FEE5E9 /* CharctersListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		B6C96A0F2749785900FEE5E9 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		B6C96A172749793B00FEE5E9 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
 		B6C96A1927497A0000FEE5E9 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
-		B6C96A1B27497BE000FEE5E9 /* CharctersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharctersList.swift; sourceTree = "<group>"; };
+		B6C96A1B27497BE000FEE5E9 /* CharctersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharctersListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +128,7 @@
 		B6C96A12274978FF00FEE5E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B6C96A1B27497BE000FEE5E9 /* CharctersList.swift */,
+				B6C96A1B27497BE000FEE5E9 /* CharctersListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,7 +239,7 @@
 				B6C96A182749793B00FEE5E9 /* MainTab.swift in Sources */,
 				B6C96A1A27497A0000FEE5E9 /* CharacterViewModel.swift in Sources */,
 				B6C96A0E2749783A00FEE5E9 /* Character.swift in Sources */,
-				B6C96A1C27497BE000FEE5E9 /* CharctersList.swift in Sources */,
+				B6C96A1C27497BE000FEE5E9 /* CharctersListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

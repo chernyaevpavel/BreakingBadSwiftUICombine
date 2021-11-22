@@ -9,14 +9,16 @@ import Foundation
 
 class CharacterViewModel: ObservableObject {
     
-    let  apiService: APIService
+    var  apiService: APIService
     @Published var characters: [Character] = []
     
     init(apiService: APIService) {
         self.apiService = apiService
     }
     
-    func getCharcters() {
-        apiService.get
+    func getCharacters() {
+        apiService.getCharacters { characters in
+            self.characters = characters
+        }
     }
 }

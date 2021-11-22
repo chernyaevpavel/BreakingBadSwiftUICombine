@@ -7,10 +7,20 @@
 
 import SwiftUI
 
+
+enum Tabs: String {
+    case characters = "Герои"
+    case episodes = "Эпизоды"
+}
+
 struct MainTab: View {
+    let characterViewModel = CharacterViewModel(apiService: APIService())
+    
     var body: some View {
         TabView {
-            <#code#>
+            CharctersListView(viewModel: characterViewModel)
+                .tabItem { Label("Герои", systemImage: "person.3.fill") }
+                .tag(Tabs.characters)
         }
     }
 }
