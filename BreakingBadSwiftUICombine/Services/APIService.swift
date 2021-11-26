@@ -50,6 +50,7 @@ struct APIService {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
         let url = Method.characters.url
+        
         return URLSession
             .shared
             .dataTaskPublisher(for: url)
@@ -76,7 +77,6 @@ struct APIService {
             .dataTaskPublisher(for: url)
             .receive(on: queue)
             .map(\.data)
-            .print("episodes")
             .decode(type: [Episode].self, decoder: decoder)
             .mapError({ error -> Error in
                 switch error {

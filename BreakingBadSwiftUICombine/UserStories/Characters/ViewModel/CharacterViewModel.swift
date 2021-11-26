@@ -22,11 +22,15 @@ class CharacterViewModel: ObservableObject {
         apiService.getCharacters()
             .receive(on: RunLoop.main)
             .sink { completion in
-                print(completion)
+                switch completion {
+                case .failure(let error):
+                    print("Error: \(error.localizedDescription)")
+                case .finished:
+                    print("finished")
+                }
             } receiveValue: { [weak self] characters in
                 guard let self = self else { return }
                 self.characters = characters
-                print(characters)
             }
             .store(in: &cancellable)
     }
