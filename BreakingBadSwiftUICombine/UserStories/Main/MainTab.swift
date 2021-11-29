@@ -23,7 +23,7 @@ struct MainTab: View {
                 .tabItem { Label("Герои", systemImage: "person.3.fill") }
                 .tag(Tabs.characters)
             EpisodesListView(viewModel: episodeViewModel)
-                .tabItem { Label("Эпизоды", systemImage: "person.3.fill") }
+                .tabItem { Label("Эпизоды", systemImage: "play.fill") }
                 .tag(Tabs.episodes)
         }
     }

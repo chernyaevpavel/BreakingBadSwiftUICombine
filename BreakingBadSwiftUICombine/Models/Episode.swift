@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Episode: Codable {
+struct Episode: Codable, Identifiable {
+    let id: UUID = UUID()
     let episodeId: Int
     let title: String
     let season: String

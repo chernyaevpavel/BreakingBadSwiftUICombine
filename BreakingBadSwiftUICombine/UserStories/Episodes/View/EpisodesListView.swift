@@ -11,7 +11,19 @@ struct EpisodesListView: View {
     @ObservedObject var viewModel: EpisodesViewModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(self.viewModel.episodes) { episode in
+            VStack(alignment: .leading) {
+                Text(episode.title)
+                    .font(.title)
+                Text("Date: \(episode.airDate)")
+                    .font(.subheadline)
+                Text("Season: \(episode.season)")
+                    .font(.subheadline)
+            }
+        }.onAppear(perform: {
+            self.viewModel.getEpisodes()
+        })
+        .navigationTitle("episode")
     }
 }
 
