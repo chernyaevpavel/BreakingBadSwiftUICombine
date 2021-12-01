@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B63828622754DDEE00BC5E1C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B63828612754DDEE00BC5E1C /* Kingfisher */; };
+		B638286A2756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B63828692756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests.swift */; };
 		B6852D462749767B00BC9C36 /* BreakingBadSwiftUICombineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6852D452749767B00BC9C36 /* BreakingBadSwiftUICombineApp.swift */; };
 		B6852D4A2749767C00BC9C36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6852D492749767C00BC9C36 /* Assets.xcassets */; };
 		B6852D4D2749767C00BC9C36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6852D4C2749767C00BC9C36 /* Preview Assets.xcassets */; };
@@ -21,7 +22,20 @@
 		B6C96A20274C2D3300FEE5E9 /* EpisodesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C96A1F274C2D3300FEE5E9 /* EpisodesViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B638286C2756A8BB00BC5E1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B6852D3A2749767B00BC9C36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B6852D412749767B00BC9C36;
+			remoteInfo = BreakingBadSwiftUICombine;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B63828672756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BreakingBadSwiftUICombineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B63828692756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBadSwiftUICombineTests.swift; sourceTree = "<group>"; };
+		B638286B2756A8BB00BC5E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6852D422749767B00BC9C36 /* BreakingBadSwiftUICombine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreakingBadSwiftUICombine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6852D452749767B00BC9C36 /* BreakingBadSwiftUICombineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingBadSwiftUICombineApp.swift; sourceTree = "<group>"; };
 		B6852D492749767C00BC9C36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B63828642756A8BB00BC5E1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B6852D3F2749767B00BC9C36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,10 +70,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B63828682756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests */ = {
+			isa = PBXGroup;
+			children = (
+				B63828692756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests.swift */,
+				B638286B2756A8BB00BC5E1C /* Info.plist */,
+			);
+			path = BreakingBadSwiftUICombineTests;
+			sourceTree = "<group>";
+		};
 		B6852D392749767B00BC9C36 = {
 			isa = PBXGroup;
 			children = (
 				B6852D442749767B00BC9C36 /* BreakingBadSwiftUICombine */,
+				B63828682756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests */,
 				B6852D432749767B00BC9C36 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				B6852D422749767B00BC9C36 /* BreakingBadSwiftUICombine.app */,
+				B63828672756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +207,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B63828662756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B638286E2756A8BB00BC5E1C /* Build configuration list for PBXNativeTarget "BreakingBadSwiftUICombineTests" */;
+			buildPhases = (
+				B63828632756A8BB00BC5E1C /* Sources */,
+				B63828642756A8BB00BC5E1C /* Frameworks */,
+				B63828652756A8BB00BC5E1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B638286D2756A8BB00BC5E1C /* PBXTargetDependency */,
+			);
+			name = BreakingBadSwiftUICombineTests;
+			productName = BreakingBadSwiftUICombineTests;
+			productReference = B63828672756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B6852D412749767B00BC9C36 /* BreakingBadSwiftUICombine */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6852D512749767C00BC9C36 /* Build configuration list for PBXNativeTarget "BreakingBadSwiftUICombine" */;
@@ -204,6 +254,10 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					B63828662756A8BB00BC5E1C = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = B6852D412749767B00BC9C36;
+					};
 					B6852D412749767B00BC9C36 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -226,11 +280,19 @@
 			projectRoot = "";
 			targets = (
 				B6852D412749767B00BC9C36 /* BreakingBadSwiftUICombine */,
+				B63828662756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B63828652756A8BB00BC5E1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B6852D402749767B00BC9C36 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,6 +305,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B63828632756A8BB00BC5E1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B638286A2756A8BB00BC5E1C /* BreakingBadSwiftUICombineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B6852D3E2749767B00BC9C36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -261,7 +331,55 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B638286D2756A8BB00BC5E1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B6852D412749767B00BC9C36 /* BreakingBadSwiftUICombine */;
+			targetProxy = B638286C2756A8BB00BC5E1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B638286F2756A8BB00BC5E1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4KZXD5977U;
+				INFOPLIST_FILE = BreakingBadSwiftUICombineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Pavel-Chernyaev.BreakingBadSwiftUICombineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreakingBadSwiftUICombine.app/BreakingBadSwiftUICombine";
+			};
+			name = Debug;
+		};
+		B63828702756A8BB00BC5E1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4KZXD5977U;
+				INFOPLIST_FILE = BreakingBadSwiftUICombineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Pavel-Chernyaev.BreakingBadSwiftUICombineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BreakingBadSwiftUICombine.app/BreakingBadSwiftUICombine";
+			};
+			name = Release;
+		};
 		B6852D4F2749767C00BC9C36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -425,6 +543,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B638286E2756A8BB00BC5E1C /* Build configuration list for PBXNativeTarget "BreakingBadSwiftUICombineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B638286F2756A8BB00BC5E1C /* Debug */,
+				B63828702756A8BB00BC5E1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B6852D3D2749767B00BC9C36 /* Build configuration list for PBXProject "BreakingBadSwiftUICombine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
